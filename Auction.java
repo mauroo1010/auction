@@ -67,7 +67,7 @@ public class Auction
                 Bid highestBid = selectedLot.getHighestBid();
                 System.out.println("Lot number: " + lotNumber +
                                    " already has a bid of: " +
-                                   highestBid.getValue());
+                                   selectedLot.getHighestBid().getValue());
             }
         }
     }
