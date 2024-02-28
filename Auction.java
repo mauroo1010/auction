@@ -88,13 +88,23 @@ public class Auction
                 resultado = lot;
                 buscando = false;
             }
-            else {
-                indice++;
-            }
+            indice++;
         }
         return resultado;
     }
 
+    /** 
+     * Elimina el lote con el número de lote especificado.
+     * @param number El número del lote que hay que eliminar,
+     * @return El lote con el número dado o null si no existe tal lote.
+     */
+    public Lot removeLot(int number) {
+        Lot lot = getLot(number);
+        if (lot != null) {
+            lots.remove(lot);
+        }
+        return lot;
+    }
     public void close() {
         int indice = 1;
         for(Lot lot : lots) {
